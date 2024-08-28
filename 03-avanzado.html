@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ibon Martínez-Arranz" /><link rel="canonical" href="https://github.com/imarranz/de-la-idea-al-codigo/03-avanzado.html" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Avanzado - De la Idea al Código: Guía para Jóvenes Programadores</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Avanzado";
+        var mkdocs_page_input_path = "03-avanzado.md";
+        var mkdocs_page_url = "/imarranz/de-la-idea-al-codigo/03-avanzado.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> De la Idea al Código: Guía para Jóvenes Programadores
+        </a>
+        <div class="version">
+          1.0
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Introducción</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">De la Idea al Código</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="01-basico.html">Básico</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="02-intermedio.html">Intermedio</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="03-avanzado.html">Avanzado</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="04-creativo.html">Creativo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Recursos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="05-recursos.html">Recursos</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">De la Idea al Código: Guía para Jóvenes Programadores</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>De la Idea al Código &raquo;</li>
+      <li class="breadcrumb-item active">Avanzado</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/imarranz/de-la-idea-al-codigo/edit/master/docs/03-avanzado.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="capitulo_3_programacion_avanzada">Capítulo 3: Programación Avanzada<a class="headerlink" href="#capitulo_3_programacion_avanzada" title="Permanent link">#</a></h2>
+<p>¡Bienvenido al tercer capítulo de nuestro viaje en el mundo de la programación! Hasta ahora, has aprendido los conceptos básicos y has explorado cómo las computadoras pueden tomar decisiones y realizar tareas repetitivas. En este capítulo, vamos a profundizar un poco más en la programación y enfrentarnos a desafíos más complejos. Este es el momento de combinar lo que has aprendido y aplicarlo a problemas que requieren un pensamiento más avanzado.</p>
+<p>Trabajaremos con cálculos más sofisticados, como determinar el número mayor entre tres valores, crear un juego para adivinar números, calcular la edad basándonos en el año de nacimiento, y verificar si un año es bisiesto. Estos ejercicios no solo te ayudarán a mejorar tus habilidades de programación, sino que también te mostrarán cómo la programación puede ser útil en situaciones prácticas de la vida real.</p>
+<h3 id="31_numero_mayor">3.1 Número Mayor<a class="headerlink" href="#31_numero_mayor" title="Permanent link">#</a></h3>
+<h4 id="el_reto">El Reto<a class="headerlink" href="#el_reto" title="Permanent link">#</a></h4>
+<p>En este ejercicio, necesitamos determinar cuál es el número mayor entre tres valores proporcionados por el usuario. Este tipo de problema es útil cuando se trabaja con comparaciones y decisiones basadas en condiciones.</p>
+<h4 id="como_resolverlo">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, utilizaremos la función <code>max()</code> de Python, que nos permite encontrar el valor máximo entre varios números. Pediremos al usuario que ingrese tres números, los compararemos y luego mostraremos el número mayor.</p>
+<h4 id="pseudocodigo">Pseudocódigo<a class="headerlink" href="#pseudocodigo" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese el primer número.</li>
+<li>Pedir al usuario que ingrese el segundo número.</li>
+<li>Pedir al usuario que ingrese el tercer número.</li>
+<li>Comparar los tres números usando la función <code>max</code>.</li>
+<li>Mostrar el número mayor en la pantalla.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo">Código<a class="headerlink" href="#codigo" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese tres números
+num1 = float(input(&quot;Ingresa el primer número: &quot;))  # Convertimos la entrada a un número decimal
+num2 = float(input(&quot;Ingresa el segundo número: &quot;))  # Convertimos la entrada a un número decimal
+num3 = float(input(&quot;Ingresa el tercer número: &quot;))  # Convertimos la entrada a un número decimal
+
+# Usamos la función max para encontrar el número mayor
+mayor = max(num1, num2, num3)  # Encuentra el mayor de los tres números
+
+# Mostramos el número mayor
+print(&quot;El número mayor es:&quot;, mayor)  # Imprime el mayor número
+</code></pre>
+<hr />
+<h3 id="32_adivina_el_numero">3.2 Adivina el Número<a class="headerlink" href="#32_adivina_el_numero" title="Permanent link">#</a></h3>
+<h4 id="el_reto_1">El Reto<a class="headerlink" href="#el_reto_1" title="Permanent link">#</a></h4>
+<p>Vamos a crear un juego sencillo en el que la computadora elige un número al azar entre 1 y 100, y el usuario tiene que adivinarlo. Después de cada intento, la computadora dará pistas indicando si el número es mayor o menor que el intento del usuario.</p>
+<h4 id="como_resolverlo_1">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_1" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, utilizaremos la función <code>randint()</code> de la biblioteca <code>random</code> para generar un número aleatorio. Luego, usaremos un bucle <code>while</code> para permitir al usuario hacer intentos hasta que adivine correctamente. En cada intento, compararemos el número ingresado por el usuario con el número secreto y daremos una pista.</p>
+<h4 id="pseudocodigo_1">Pseudocódigo<a class="headerlink" href="#pseudocodigo_1" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Generar un número aleatorio entre 1 y 100 y guardarlo como <code>numero_secreto</code>.</li>
+<li>Inicializar un contador de intentos en 0.</li>
+<li>Repetir hasta que el usuario adivine el número:</li>
+<li>Pedir al usuario que ingrese un número.</li>
+<li>Aumentar el contador de intentos.</li>
+<li>Si el número es menor que <code>numero_secreto</code>, mostrar "Muy bajo, intenta de nuevo".</li>
+<li>Si el número es mayor que <code>numero_secreto</code>, mostrar "Muy alto, intenta de nuevo".</li>
+<li>Si el número es igual a <code>numero_secreto</code>, mostrar "Felicidades" y salir del bucle.</li>
+<li>Mostrar el número de intentos realizados.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_1">Código<a class="headerlink" href="#codigo_1" title="Permanent link">#</a></h4>
+<pre><code class="language-python">import random  # Importamos la biblioteca random para generar un número aleatorio
+
+# Generamos un número aleatorio entre 1 y 100
+numero_secreto = random.randint(1, 100)  # Guardamos el número aleatorio
+
+intentos = 0  # Inicializamos un contador de intentos
+
+# Creamos un bucle para que el usuario adivine el número
+while True:
+    intento = int(input(&quot;Adivina el número (entre 1 y 100): &quot;))  # Pedimos un número al usuario
+    intentos += 1  # Aumentamos el contador de intentos
+
+    # Comparamos el intento con el número secreto
+    if intento &lt; numero_secreto:
+        print(&quot;Muy bajo, intenta de nuevo.&quot;)  # El número es menor al secreto
+    elif intento &gt; numero_secreto:
+        print(&quot;Muy alto, intenta de nuevo.&quot;)  # El número es mayor al secreto
+    else:
+        print(f&quot;Felicidades, adivinaste el número en {intentos} intentos.&quot;)  # El número es correcto
+        break  # Salimos del bucle
+</code></pre>
+<hr />
+<h3 id="33_calcula_la_edad">3.3 Calcula la Edad<a class="headerlink" href="#33_calcula_la_edad" title="Permanent link">#</a></h3>
+<h4 id="el_reto_2">El Reto<a class="headerlink" href="#el_reto_2" title="Permanent link">#</a></h4>
+<p>En este ejercicio, vamos a calcular la edad de una persona basándonos en su año de nacimiento. Este ejercicio es útil para aprender a trabajar con fechas y operaciones aritméticas básicas.</p>
+<h4 id="como_resolverlo_2">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_2" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, primero pediremos al usuario que ingrese su año de nacimiento. Luego, obtendremos el año actual utilizando la biblioteca <code>datetime</code>, restaremos el año de nacimiento del año actual, y así obtendremos la edad de la persona.</p>
+<h4 id="pseudocodigo_2">Pseudocódigo<a class="headerlink" href="#pseudocodigo_2" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese su año de nacimiento.</li>
+<li>Obtener el año actual utilizando la biblioteca <code>datetime</code>.</li>
+<li>Calcular la edad restando el año de nacimiento del año actual.</li>
+<li>Mostrar la edad en la pantalla.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_2">Código<a class="headerlink" href="#codigo_2" title="Permanent link">#</a></h4>
+<pre><code class="language-python">from datetime import datetime  # Importamos la biblioteca datetime para manejar fechas
+
+# Pedimos al usuario que ingrese su año de nacimiento
+ano_nacimiento = int(input(&quot;¿En qué año naciste? &quot;))  # Convertimos la entrada a un número entero
+
+# Obtenemos el año actual usando datetime
+ano_actual = datetime.now().year  # Obtenemos el año actual
+
+# Calculamos la edad restando el año de nacimiento al año actual
+edad = ano_actual - ano_nacimiento  # Calculamos la diferencia de años
+
+# Mostramos la edad del usuario
+print(f&quot;Tienes {edad} años.&quot;)  # Imprime la edad calculada
+</code></pre>
+<hr />
+<h3 id="34_ano_bisiesto">3.4 Año Bisiesto<a class="headerlink" href="#34_ano_bisiesto" title="Permanent link">#</a></h3>
+<h4 id="el_reto_3">El Reto<a class="headerlink" href="#el_reto_3" title="Permanent link">#</a></h4>
+<p>Un año bisiesto es aquel que tiene un día adicional (29 de febrero), y ocurre cada cuatro años, con algunas excepciones. En este ejercicio, escribiremos un programa que determine si un año ingresado por el usuario es bisiesto o no.</p>
+<h4 id="como_resolverlo_3">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_3" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, aplicaremos las reglas de los años bisiestos: un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400. Usaremos estas condiciones en un bloque <code>if-elif-else</code>.</p>
+<h4 id="pseudocodigo_3">Pseudocódigo<a class="headerlink" href="#pseudocodigo_3" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese un año.</li>
+<li>Verificar si el año es divisible por 4 y no divisible por 100, o si es divisible por 400:</li>
+<li>Si es así, mostrar que el año es bisiesto.</li>
+<li>De lo contrario, mostrar que el año no es bisiesto.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_3">Código<a class="headerlink" href="#codigo_3" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese un año
+ano = int(input(&quot;Ingresa un año: &quot;))  # Convertimos la entrada a un número entero
+
+# Verificamos si el año es bisiesto
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print(f&quot;El año {ano} es bisiesto.&quot;)  # Imprime si el año es bisiesto
+else:
+    print(f&quot;El año {ano} no es bisiesto.&quot;)  # Imprime si el año no es bisiesto
+</code></pre>
+<hr />
+<h3 id="35_conversion_de_temperaturas">3.5 Conversión de Temperaturas<a class="headerlink" href="#35_conversion_de_temperaturas" title="Permanent link">#</a></h3>
+<h4 id="el_reto_4">El Reto<a class="headerlink" href="#el_reto_4" title="Permanent link">#</a></h4>
+<p>En este ejercicio, vamos a crear un programa que convierta temperaturas de Celsius a Fahrenheit y viceversa. La conversión de temperaturas es un ejercicio práctico que refuerza el uso de fórmulas matemáticas y toma de decisiones en programación.</p>
+<h4 id="como_resolverlo_4">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_4" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, primero pediremos al usuario que elija qué conversión desea realizar. Dependiendo de su elección, realizaremos la conversión utilizando las fórmulas correspondientes. Mostraremos el resultado final al usuario.</p>
+<h4 id="pseudocodigo_4">Pseudocódigo<a class="headerlink" href="#pseudocodigo_4" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que elija entre convertir de Celsius a Fahrenheit o de Fahrenheit a Celsius.</li>
+<li>Si elige Celsius a Fahrenheit:</li>
+<li>Pedir la temperatura en Celsius.</li>
+<li>Convertirla a Fahrenheit usando la fórmula correspondiente.</li>
+<li>Mostrar el resultado.</li>
+<li>Si elige Fahrenheit a Celsius:</li>
+<li>Pedir la temperatura en Fahrenheit.</li>
+<li>Convertirla a Celsius usando la fórmula correspondiente.</li>
+<li>Mostrar el resultado.</li>
+<li>Si la opción no es válida, mostrar un mensaje de error.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_4">Código<a class="headerlink" href="#codigo_4" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que elija la conversión que desea hacer
+opcion = input(&quot;¿Deseas convertir de Celsius a Fahrenheit (C) o de Fahrenheit a Celsius (F)? &quot;).strip().upper()
+
+# Dependiendo de la opción, hacemos la conversión correspondiente
+if opcion == &quot;C&quot;:
+    celsius = float(input(&quot;Ingresa la temperatura en Celsius: &quot;))  # Pedimos la temperatura en Celsius
+    fahrenheit = (celsius * 9/5) + 32  # Convertimos a Fahrenheit usando la fórmula
+    print(f&quot;{celsius} grados Celsius son {fahrenheit} grados Fahrenheit.&quot;)  # Mostramos el resultado
+elif opcion == &quot;F&quot;:
+    fahrenheit = float(input(&quot;Ingresa la temperatura en Fahrenheit: &quot;))  # Pedimos la temperatura en Fahrenheit
+    celsius = (fahrenheit - 32) * 5/9  # Convertimos a Celsius usando la fórmula
+    print(f&quot;{fahrenheit} grados Fahrenheit son {celsius} grados Celsius.&quot;)  # Mostramos el resultado
+else:
+    print(&quot;Opción no válida. Por favor elige 'C' o 'F'.&quot;)  # Mensaje si la opción es inválida
+</code></pre>
+<hr />
+<p>¡Y con esto, hemos completado nuestro tercer capítulo! Estos ejercicios avanzados te han mostrado cómo resolver problemas más complejos y te han dado una idea de cómo la programación puede aplicarse a situaciones del mundo real. En el próximo capítulo, exploraremos la programación creativa, donde tendrás la oportunidad de usar todo lo que has aprendido para crear programas divertidos y originales. ¡Sigue adelante y no dejes de practicar!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="02-intermedio.html" class="btn btn-neutral float-left" title="Intermedio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="04-creativo.html" class="btn btn-neutral float-right" title="Creativo">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><b>De la Idea al Código: Guía para Jóvenes Programadores</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/imarranz/de-la-idea-al-codigo" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="02-intermedio.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="04-creativo.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ibon Martínez-Arranz" /><link rel="canonical" href="https://github.com/imarranz/de-la-idea-al-codigo/02-intermedio.html" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Intermedio - De la Idea al Código: Guía para Jóvenes Programadores</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Intermedio";
+        var mkdocs_page_input_path = "02-intermedio.md";
+        var mkdocs_page_url = "/imarranz/de-la-idea-al-codigo/02-intermedio.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> De la Idea al Código: Guía para Jóvenes Programadores
+        </a>
+        <div class="version">
+          1.0
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Introducción</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">De la Idea al Código</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="01-basico.html">Básico</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="02-intermedio.html">Intermedio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="03-avanzado.html">Avanzado</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="04-creativo.html">Creativo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Recursos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="05-recursos.html">Recursos</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">De la Idea al Código: Guía para Jóvenes Programadores</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>De la Idea al Código &raquo;</li>
+      <li class="breadcrumb-item active">Intermedio</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/imarranz/de-la-idea-al-codigo/edit/master/docs/02-intermedio.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="capitulo_2_programacion_intermedia">Capítulo 2: Programación Intermedia<a class="headerlink" href="#capitulo_2_programacion_intermedia" title="Permanent link">#</a></h2>
+<p>¡Felicidades por completar el primer capítulo! Ahora que ya tienes una base sólida en los conceptos básicos de programación, es momento de dar un paso más y explorar algunas ideas más complejas. En este capítulo, nos centraremos en cómo las computadoras pueden tomar decisiones y realizar tareas repetitivas automáticamente. Estos conceptos son fundamentales en la programación, ya que nos permiten escribir programas más útiles y dinámicos.</p>
+<p>Vamos a explorar cómo podemos crear tablas de multiplicar, jugar a los dados de manera automática, y cómo hacer que la computadora nos salude de manera personalizada. Además, trabajaremos con cadenas de texto para realizar tareas más interesantes, como contar vocales. Este capítulo está diseñado para que practiques y consolides lo que has aprendido, mientras te introduces en conceptos más avanzados que te prepararán para los desafíos que vendrán en los siguientes capítulos.</p>
+<h3 id="21_tabla_de_multiplicar">2.1 Tabla de Multiplicar<a class="headerlink" href="#21_tabla_de_multiplicar" title="Permanent link">#</a></h3>
+<h4 id="el_reto">El Reto<a class="headerlink" href="#el_reto" title="Permanent link">#</a></h4>
+<p>Una de las primeras cosas útiles que podemos hacer con la programación es automatizar cálculos repetitivos. En este ejercicio, vamos a crear un programa que genere la tabla de multiplicar de cualquier número que el usuario elija. Esto es útil no solo para practicar matemáticas, sino también para entender cómo funcionan los bucles en programación.</p>
+<h4 id="como_resolverlo">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, utilizaremos un bucle <code>for</code> que recorre los números del 1 al 10. En cada iteración del bucle, multiplicaremos el número ingresado por el usuario por el número de la iteración, y mostraremos el resultado.</p>
+<h4 id="pseudocodigo">Pseudocódigo<a class="headerlink" href="#pseudocodigo" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese un número.</li>
+<li>Para cada número del 1 al 10:</li>
+<li>Multiplicar el número del usuario por el número actual del bucle.</li>
+<li>Mostrar el resultado de la multiplicación.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo">Código<a class="headerlink" href="#codigo" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese un número para calcular su tabla de multiplicar
+numero = int(input(&quot;Ingresa un número para ver su tabla de multiplicar: &quot;))  # Convertimos la entrada a un número entero
+
+# Usamos un bucle for para iterar desde 1 hasta 10
+for i in range(1, 11):  # Recorremos los números del 1 al 10
+    # Mostramos el resultado de la multiplicación en cada iteración
+    print(f&quot;{numero} x {i} = {numero * i}&quot;)  # Imprime el resultado de la multiplicación
+</code></pre>
+<hr />
+<h3 id="22_juego_de_dados">2.2 Juego de Dados<a class="headerlink" href="#22_juego_de_dados" title="Permanent link">#</a></h3>
+<h4 id="el_reto_1">El Reto<a class="headerlink" href="#el_reto_1" title="Permanent link">#</a></h4>
+<p>¡Hora de divertirnos un poco! En este ejercicio, vamos a simular el lanzamiento de dos dados y determinar cuál de los dos tiene el valor más alto. Esto es una excelente práctica para trabajar con números aleatorios, un concepto muy útil en la programación de juegos.</p>
+<h4 id="como_resolverlo_1">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_1" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, usaremos la función <code>randint()</code> de la biblioteca <code>random</code> para simular el lanzamiento de los dados. Luego, compararemos los valores obtenidos para determinar el ganador.</p>
+<h4 id="pseudocodigo_1">Pseudocódigo<a class="headerlink" href="#pseudocodigo_1" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Generar un número aleatorio entre 1 y 6 para el primer dado.</li>
+<li>Generar un número aleatorio entre 1 y 6 para el segundo dado.</li>
+<li>Mostrar los valores de ambos dados.</li>
+<li>Comparar los valores:</li>
+<li>Si el primer dado es mayor, mostrar que el primer dado gana.</li>
+<li>Si el segundo dado es mayor, mostrar que el segundo dado gana.</li>
+<li>Si los dos dados son iguales, mostrar que es un empate.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_1">Código<a class="headerlink" href="#codigo_1" title="Permanent link">#</a></h4>
+<pre><code class="language-python">import random  # Importamos la biblioteca random para generar números aleatorios
+
+# Generamos dos números aleatorios entre 1 y 6, como si fueran dados
+dado1 = random.randint(1, 6)  # Genera un número aleatorio para el primer dado
+dado2 = random.randint(1, 6)  # Genera un número aleatorio para el segundo dado
+
+# Mostramos los valores de los dados
+print(f&quot;El primer dado sacó: {dado1}&quot;)  # Imprime el valor del primer dado
+print(f&quot;El segundo dado sacó: {dado2}&quot;)  # Imprime el valor del segundo dado
+
+# Determinamos quién ganó o si fue un empate
+if dado1 &gt; dado2:
+    print(&quot;El primer dado gana&quot;)  # Imprime si el primer dado es mayor
+elif dado1 &lt; dado2:
+    print(&quot;El segundo dado gana&quot;)  # Imprime si el segundo dado es mayor
+else:
+    print(&quot;Es un empate&quot;)  # Imprime si ambos dados tienen el mismo valor
+</code></pre>
+<hr />
+<h3 id="23_saludo_personalizado">2.3 Saludo Personalizado<a class="headerlink" href="#23_saludo_personalizado" title="Permanent link">#</a></h3>
+<h4 id="el_reto_2">El Reto<a class="headerlink" href="#el_reto_2" title="Permanent link">#</a></h4>
+<p>En este ejercicio, vamos a hacer que el programa sea más interactivo. Queremos que el programa pregunte el nombre del usuario y luego lo salude de manera personalizada. Esto es un gran ejemplo de cómo los programas pueden interactuar con las personas y hacer que la experiencia sea más personal y divertida.</p>
+<h4 id="como_resolverlo_2">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_2" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, usaremos la función <code>input()</code> para obtener el nombre del usuario y luego usaremos la función <code>print()</code> para mostrar un mensaje personalizado.</p>
+<h4 id="pseudocodigo_2">Pseudocódigo<a class="headerlink" href="#pseudocodigo_2" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese su nombre.</li>
+<li>Mostrar un saludo personalizado usando el nombre del usuario.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_2">Código<a class="headerlink" href="#codigo_2" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese su nombre
+nombre = input(&quot;¿Cuál es tu nombre? &quot;)  # Guardamos la entrada del usuario
+
+# Saludamos al usuario usando su nombre
+print(f&quot;Hola, {nombre}&quot;)  # Imprime un saludo personalizado
+</code></pre>
+<hr />
+<h3 id="24_cadenas_de_texto">2.4 Cadenas de Texto<a class="headerlink" href="#24_cadenas_de_texto" title="Permanent link">#</a></h3>
+<h4 id="el_reto_3">El Reto<a class="headerlink" href="#el_reto_3" title="Permanent link">#</a></h4>
+<p>Las cadenas de texto son una parte fundamental de la programación. En este ejercicio, vamos a trabajar con cadenas para aprender cómo podemos manipular texto en Python. Específicamente, vamos a pedir al usuario que ingrese una cadena de texto, y luego vamos a realizar algunas operaciones básicas con esa cadena.</p>
+<h4 id="como_resolverlo_3">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_3" title="Permanent link">#</a></h4>
+<p>Trabajaremos con varias funciones incorporadas en Python para manipular la cadena de texto. Veremos cómo contar la longitud de la cadena, convertirla a mayúsculas y mostrarla al revés.</p>
+<h4 id="pseudocodigo_3">Pseudocódigo<a class="headerlink" href="#pseudocodigo_3" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese una cadena de texto.</li>
+<li>Mostrar la longitud de la cadena.</li>
+<li>Convertir la cadena a mayúsculas y mostrarla.</li>
+<li>Invertir la cadena y mostrarla.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_3">Código<a class="headerlink" href="#codigo_3" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese una cadena de texto
+texto = input(&quot;Ingresa una cadena de texto: &quot;)  # Guardamos la entrada del usuario
+
+# Mostramos la longitud de la cadena
+print(&quot;La longitud de la cadena es:&quot;, len(texto))  # Imprime el número de caracteres en la cadena
+
+# Convertimos la cadena a mayúsculas y la mostramos
+print(&quot;La cadena en mayúsculas es:&quot;, texto.upper())  # Convierte la cadena a mayúsculas
+
+# Invertimos la cadena y la mostramos
+print(&quot;La cadena al revés es:&quot;, texto[::-1])  # Imprime la cadena invertida
+</code></pre>
+<hr />
+<h3 id="25_contador_de_vocales">2.5 Contador de Vocales<a class="headerlink" href="#25_contador_de_vocales" title="Permanent link">#</a></h3>
+<h4 id="el_reto_4">El Reto<a class="headerlink" href="#el_reto_4" title="Permanent link">#</a></h4>
+<p>En este ejercicio, vamos a trabajar con cadenas de texto para contar cuántas vocales contiene una cadena. Este es un excelente ejercicio para practicar el trabajo con bucles y condiciones en programación.</p>
+<h4 id="como_resolverlo_4">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_4" title="Permanent link">#</a></h4>
+<p>Para resolver este problema, recorreremos cada carácter de la cadena y verificaremos si es una vocal. Si lo es, aumentaremos un contador. Al final, mostraremos el número total de vocales encontradas.</p>
+<h4 id="pseudocodigo_4">Pseudocódigo<a class="headerlink" href="#pseudocodigo_4" title="Permanent link">#</a></h4>
+<ol>
+<li>Empezar el programa.</li>
+<li>Pedir al usuario que ingrese una cadena de texto.</li>
+<li>Inicializar un contador de vocales en 0.</li>
+<li>Recorrer cada carácter de la cadena:</li>
+<li>Si el carácter es una vocal, aumentar el contador.</li>
+<li>Mostrar el número total de vocales encontradas.</li>
+<li>Finalizar el programa.</li>
+</ol>
+<h4 id="codigo_4">Código<a class="headerlink" href="#codigo_4" title="Permanent link">#</a></h4>
+<pre><code class="language-python"># Pedimos al usuario que ingrese una cadena de texto
+texto = input(&quot;Ingresa una cadena de texto: &quot;)  # Guardamos la entrada del usuario
+
+# Definimos un conjunto de vocales para comparar
+vocales = &quot;aeiouAEIOU&quot;  # Incluimos tanto mayúsculas como minúsculas
+contador = 0  # Inicializamos un contador
+
+# Iteramos a través de cada carácter en la cadena
+for char in texto:
+    if char in vocales:  # Verificamos si el carácter es una vocal
+        contador += 1  # Aumentamos el contador si es una vocal
+
+# Mostramos el número total de vocales encontradas
+print(&quot;El número de vocales en la cadena es:&quot;, contador)  # Imprime el conteo de vocales
+</code></pre>
+<hr />
+<p>¡Y con esto, hemos completado nuestro segundo capítulo! Estos ejercicios intermedios te han enseñado a trabajar con bucles, condiciones y cadenas de texto, lo que te permitirá escribir programas más interactivos y útiles. En el próximo capítulo, profundizaremos aún más y te enfrentaremos a desafíos más avanzados que te ayudarán a convertirte en un programador aún más habilidoso. ¡Sigue así!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="01-basico.html" class="btn btn-neutral float-left" title="Básico"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="03-avanzado.html" class="btn btn-neutral float-right" title="Avanzado">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><b>De la Idea al Código: Guía para Jóvenes Programadores</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/imarranz/de-la-idea-al-codigo" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="01-basico.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="03-avanzado.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
