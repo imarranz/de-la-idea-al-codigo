@@ -13,7 +13,7 @@
   </a>
    <a href="https://github.com/imarranz/de-la-idea-al-codigo"><img src="https://img.shields.io/github/stars/imarranz/de-la-idea-al-codigo" alt="Stars"/>
   </a>
-   <a href="https://imarranz.github.io/de-la-idea-al-codigo/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fimarranz.github.io%2Fde-la-idea-al-codigo%2F&up_message=De%20la%20Idea%20al%20Código" alt="Web"/>
+   <a href="https://imarranz.github.io/de-la-idea-al-codigo/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fimarranz.github.io%2Fde-la-idea-al-codigo%2F&up_message=De%20la%20Idea%20al%20C%C3%B3digo" alt="Web"/>
   </a>
   <a href="https://drive.google.com/file/d/17NQ6exAZVZnUaj3gou2FwYarzAixAw7V/view?usp=drive_link">
       <img src="https://img.shields.io/badge/Google%20Drive-4285F4?logo=googledrive&logoColor=fff" alt="Download"/>
