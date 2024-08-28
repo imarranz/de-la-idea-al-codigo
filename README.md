@@ -2,7 +2,7 @@
 # De la Idea al Código: Guía para Jóvenes Programadores
 
 
-![](https://repository-images.githubusercontent.com/717559382/ec86779c-43cc-4328-9a1d-346c44289c15)
+![](https://repository-images.githubusercontent.com/848736141/31b3ca99-1c64-4a3a-af0e-7049e6bc65fc)
 
 <p align="center">
   <a href="https://github.com/imarranz/de-la-idea-al-codigo/pulls">
