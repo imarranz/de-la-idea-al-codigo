@@ -15,7 +15,7 @@
   </a>
    <a href="https://imarranz.github.io/de-la-idea-al-codigo/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fimarranz.github.io%2Fde-la-idea-al-codigo%2F&up_message=De%20la%20Idea%20al%20C%C3%B3digo" alt="Web"/>
   </a>
-  <a href="https://drive.google.com/file/d/17NQ6exAZVZnUaj3gou2FwYarzAixAw7V/view?usp=drive_link">
+  <a href="https://drive.google.com/file/d/1RfJuhj5n8FH9NDat_qjMiBo2XB1fAzDe/view?usp=drive_link">
       <img src="https://img.shields.io/badge/Google%20Drive-4285F4?logo=googledrive&logoColor=fff" alt="Download"/>
   </a>
 </p>
@@ -28,13 +28,15 @@
 
 ## Introducción
 
-¡Bienvenidos a "De la idea al código: guía para jóvenes programadores"! Este manual nació del deseo de enseñar a mis propios hijos a programar, y ha sido un proyecto que hemos desarrollado juntos, paso a paso, en un emocionante viaje de aprendizaje. Programar no solo les ha permitido crear sus propios juegos y aplicaciones, sino que también ha sido una excelente manera de desarrollar su capacidad para resolver problemas y pensar de manera lógica.
+¡Bienvenidos a **De la Idea al Código: Guía para Jóvenes Programadores**! Este manual nació del deseo de enseñar a mis propios hijos a programar, y ha sido un proyecto que hemos desarrollado juntos, paso a paso, en un divertido viaje de aprendizaje. Programar no solo les ha permitido crear sus propios juegos y aplicaciones, sino que también ha sido una excelente manera de desarrollar su capacidad para resolver problemas y pensar de manera lógica que espero les sirva en el futuro.
 
-En este libro, exploraremos las bases de la programación utilizando Python, un lenguaje muy potente y fácil de aprender, que hemos encontrado ideal para introducir a los más jóvenes en este mundo. A medida que avances, te enfrentarás a desafíos más complejos, pero no te preocupes, ¡estaremos contigo en cada paso del camino, tal como lo hemos estado con nuestros hijos!
+En este libro, se exploran las bases de la programación utilizando Python, un lenguaje muy potente y fácil de aprender, que considero ideal para introducir a los más jóvenes en este mundo. A medida que se avanza, te enfrentarás a desafíos más complejos, pero no te preocupes, ¡hay pistas y pasos a seguir para resolver cada reto!
 
-Cada capítulo te enseñará nuevos conceptos y habilidades, desde los fundamentos básicos hasta la creación de proyectos más creativos y avanzados. Aprenderás cómo las computadoras pueden realizar cálculos, tomar decisiones y realizar tareas repetitivas. Pero lo más importante, te divertirás mientras desarrollas tus propias creaciones, tal como lo hicimos nosotros.
+Cada capítulo enseña nuevos conceptos y habilidades, desde los fundamentos básicos hasta la creación de proyectos más creativos y avanzados. Aprenderás cómo las computadoras pueden realizar cálculos, tomar decisiones y realizar tareas repetitivas. Pero lo más importante, te divertirás mientras desarrollas tus propias creaciones, tal como lo hicimos nosotros.
 
-Este proyecto es un esfuerzo continuo y vivo, que ponemos a disposición de la comunidad con la esperanza de que sea útil para otros padres, educadores y jóvenes programadores. Si encuentras valor en él, siéntete libre de compartirlo, usarlo y contribuir a su crecimiento. ¡Estamos emocionados de ver cómo más niños pueden aprender y disfrutar de la programación gracias a esta guía!
+Este proyecto es un esfuerzo continuo y vivo, que ponemos a disposición de la comunidad con la esperanza de que sea útil para otros padres, educadores y jóvenes programadores. Si encuentras valor en él, siéntete libre de compartirlo, usarlo y contribuir a su crecimiento. ¡Estaremos encantados de ver cómo otros niños y niñas pueden aprender y disfrutar de la programación gracias a esta guía!
+
+Si eres un programador con experiencia notarás enseguida que los programas no son ni óptimos ni eficientes, pero es que hemos preferido dar más peso a la interpretabilidad del código.
 
 ## Estructura del Manual
 
