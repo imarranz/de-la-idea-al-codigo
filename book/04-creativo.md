@@ -1,4 +1,7 @@
 
+\clearpage
+\newpage
+
 ## Capítulo 4: Programación Creativa
 
 ¡Bienvenido al capítulo más divertido de este manual! Hasta ahora, has aprendido los conceptos básicos, intermedios y avanzados de la programación en Python. En este último capítulo, vamos a liberar toda tu creatividad. La programación no solo es una herramienta poderosa para resolver problemas, sino que también es una forma de arte. Aquí, tendrás la oportunidad de usar todo lo que has aprendido para crear programas que no solo son funcionales, sino también visualmente interesantes y divertidos de usar.

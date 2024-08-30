@@ -1,4 +1,7 @@
 
+\clearpage
+\newpage
+
 ## Capítulo 5: Recursos
 
 ¡Felicidades por llegar hasta aquí! Ahora que has completado todos los capítulos de este manual y has aprendido los fundamentos de la programación en Python, es el momento de seguir avanzando. La programación es un campo vasto y emocionante, y siempre hay algo nuevo por descubrir. En este capítulo, hemos recopilado una serie de recursos adicionales para ayudarte a continuar tu aprendizaje. Ya sea que seas un niño curioso que quiere explorar más, o un educador que busca inspirar a sus estudiantes, estos recursos te serán de gran ayuda.

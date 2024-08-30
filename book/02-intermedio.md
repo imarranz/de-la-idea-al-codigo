@@ -1,4 +1,7 @@
 
+\clearpage
+\newpage
+
 ## Capítulo 2: Programación Intermedia
 
 ¡Felicidades por completar el primer capítulo! Ahora que ya tienes una base sólida en los conceptos básicos de programación, es momento de dar un paso más y explorar algunas ideas más complejas. En este capítulo, nos centraremos en cómo las computadoras pueden tomar decisiones y realizar tareas repetitivas automáticamente. Estos conceptos son fundamentales en la programación, ya que nos permiten escribir programas más útiles y dinámicos.

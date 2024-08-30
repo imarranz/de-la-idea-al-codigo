@@ -1,4 +1,7 @@
 
+\clearpage
+\newpage
+
 ## Capítulo 1: Conceptos Básicos de Programación
 
 ¡Bienvenidos al primer capítulo de nuestro viaje por el mundo de la programación! Aquí es donde todo comienza. En este capítulo, aprenderemos los conceptos fundamentales de la programación en Python, un lenguaje que es tan poderoso como fácil de aprender. Si nunca has programado antes, no te preocupes. Este capítulo está diseñado para llevarte de la mano, paso a paso, desde lo más básico hasta que tengas las herramientas necesarias para crear tus propios programas.

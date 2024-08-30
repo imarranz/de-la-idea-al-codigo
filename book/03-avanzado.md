@@ -1,4 +1,7 @@
 
+\clearpage
+\newpage
+
 ## Capítulo 3: Programación Avanzada
 
 ¡Bienvenido al tercer capítulo de nuestro viaje en el mundo de la programación! Hasta ahora, has aprendido los conceptos básicos y has explorado cómo las computadoras pueden tomar decisiones y realizar tareas repetitivas. En este capítulo, vamos a profundizar un poco más en la programación y enfrentarnos a desafíos más complejos. Este es el momento de combinar lo que has aprendido y aplicarlo a problemas que requieren un pensamiento más avanzado.
