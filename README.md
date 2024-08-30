@@ -36,7 +36,7 @@ Cada capítulo enseña nuevos conceptos y habilidades, desde los fundamentos bá
 
 Este proyecto es un esfuerzo continuo y vivo, que ponemos a disposición de la comunidad con la esperanza de que sea útil para otros padres, educadores y jóvenes programadores. Si encuentras valor en él, siéntete libre de compartirlo, usarlo y contribuir a su crecimiento. ¡Estaremos encantados de ver cómo otros niños y niñas pueden aprender y disfrutar de la programación gracias a esta guía!
 
-Si eres un programador con experiencia notarás enseguida que los programas no son ni óptimos ni eficientes, pero es que hemos preferido dar más peso a la interpretabilidad del código.
+Si eres un programador con experiencia notarás enseguida que los programas no son ni óptimos ni eficientes, pero es que he preferido dar más peso a la interpretabilidad del código para poder explicar mejor cómo "piensa" el programa.
 
 ## Estructura del Manual
 
