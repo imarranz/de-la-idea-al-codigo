@@ -117,6 +117,8 @@ filas = int(input(&quot;¿Cuántas filas tendrá la pirámide? &quot;))  # Conve
 for i in range(1, filas + 1):  # Iteramos desde 1 hasta el número de filas
     print(&quot; &quot; * (filas - i) + &quot;*&quot; * (2 * i - 1))  # Imprime los espacios y los asteriscos correspondientes en cada fila
 </code></pre>
+<h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
+<p>¿Puedes hacer que la pirámide se dibuje al revés, con la base en la parte superior? Modifica el código para que la pirámide se invierta, o prueba a crear una pirámide hueca.</p>
 <hr />
 <h3 id="42_patron_de_diamante">4.2 Patrón de Diamante<a class="headerlink" href="#42_patron_de_diamante" title="Permanent link">#</a></h3>
 <h4 id="el_reto_1">El Reto<a class="headerlink" href="#el_reto_1" title="Permanent link">#</a></h4>
@@ -155,6 +157,8 @@ for i in range(1, filas + 1):  # Iteramos desde 1 hasta el número de filas
 for i in range(filas - 1, 0, -1):  # Iteramos de regreso desde el número de filas menos 1 hasta 1
     print(&quot; &quot; * (filas - i) + &quot;*&quot; * (2 * i - 1))  # Imprime los espacios y los asteriscos
 </code></pre>
+<h4 id="desafio_1">Desafío<a class="headerlink" href="#desafio_1" title="Permanent link">#</a></h4>
+<p>¿Qué tal si hacemos que el diamante sea de otro carácter en lugar de asteriscos? Intenta modificar el programa para que el usuario pueda elegir con qué símbolo dibujar el diamante.</p>
 <hr />
 <h3 id="43_numero_aleatorio_dentro_de_un_rango">4.3 Número Aleatorio dentro de un Rango<a class="headerlink" href="#43_numero_aleatorio_dentro_de_un_rango" title="Permanent link">#</a></h3>
 <h4 id="el_reto_2">El Reto<a class="headerlink" href="#el_reto_2" title="Permanent link">#</a></h4>
@@ -183,6 +187,8 @@ numero_aleatorio = random.randint(limite_inferior, limite_superior)  # Genera un
 # Mostramos el número aleatorio
 print(f&quot;El número aleatorio entre {limite_inferior} y {limite_superior} es: {numero_aleatorio}&quot;)  # Imprime el número aleatorio
 </code></pre>
+<h4 id="desafio_2">Desafío<a class="headerlink" href="#desafio_2" title="Permanent link">#</a></h4>
+<p>¿Y si añadimos una función que permita generar una lista de números aleatorios? Modifica el programa para que el usuario pueda elegir cuántos números aleatorios desea generar.</p>
 <hr />
 <h3 id="44_palindromo">4.4 Palíndromo<a class="headerlink" href="#44_palindromo" title="Permanent link">#</a></h3>
 <h4 id="el_reto_3">El Reto<a class="headerlink" href="#el_reto_3" title="Permanent link">#</a></h4>
@@ -210,6 +216,8 @@ if texto == texto[::-1]:  # Comparamos el texto con su versión invertida
 else:
     print(&quot;No es un palíndromo.&quot;)  # Imprime si el texto no es un palíndromo
 </code></pre>
+<h4 id="desafio_3">Desafío<a class="headerlink" href="#desafio_3" title="Permanent link">#</a></h4>
+<p>¿Puedes modificar el programa para que ignore las mayúsculas y los signos de puntuación al comprobar si es un palíndromo? Intenta hacerlo más robusto para detectar palíndromos en frases más complejas.</p>
 <hr />
 <h3 id="45_dibujar_un_rectangulo_con_asteriscos">4.5 Dibujar un Rectángulo con Asteriscos<a class="headerlink" href="#45_dibujar_un_rectangulo_con_asteriscos" title="Permanent link">#</a></h3>
 <h4 id="el_reto_4">El Reto<a class="headerlink" href="#el_reto_4" title="Permanent link">#</a></h4>
@@ -234,6 +242,8 @@ ancho = int(input(&quot;Ingresa el ancho del rectángulo: &quot;))  # Convertimo
 for i in range(ancho):  # Iteramos tantas veces como el ancho
     print(&quot;*&quot; * longitud)  # Imprimimos una fila de asteriscos de longitud dada
 </code></pre>
+<h4 id="desafio_4">Desafío<a class="headerlink" href="#desafio_4" title="Permanent link">#</a></h4>
+<p>¿Qué tal si hacemos que el rectángulo sea hueco por dentro? Modifica el programa para que dibuje un rectángulo con solo el borde hecho de asteriscos.</p>
 <hr />
 <p>¡Felicidades! Has completado el capítulo de Programación Creativa y, con ello, el último capítulo de este manual. Los ejercicios de este capítulo te han permitido experimentar con patrones y generar contenido visual interesante utilizando código. La programación es una herramienta poderosa no solo para resolver problemas, sino también para expresar tu creatividad. Ahora que has aprendido tanto, estás listo para seguir explorando y creando con Python. ¡El límite es tu imaginación!</p>
               
