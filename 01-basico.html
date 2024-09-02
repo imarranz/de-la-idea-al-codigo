@@ -112,6 +112,12 @@
 <pre><code class="language-python"># Imprime un saludo simple en la pantalla
 print(&quot;Hola Mundo&quot;)  # Esto imprimirá &quot;Hola Mundo&quot; en la consola
 </code></pre>
+<p><button onclick="runPython()">Ejecutar Hola Mundo</button></p>
+<pre id="output"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script type="text/python"> # Código Python def hello_world(): return "Hola Mundo desde Python en el navegador!" # Llamada a la función y salida output = hello_world() document.getElementById("output").textContent = output </script>
+<script> async function runPython() { let pyodide = await loadPyodide(); await pyodide.runPythonAsync(document.querySelector('script[type="text/python"]').textContent); } </script>
+
 <h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
 <p>¿Se te ocurren otras formas de mostrar mensajes en la pantalla? ¿Qué tal si pruebas a saludar en varios idiomas? Intenta modificar el programa para que imprima un saludo diferente cada vez que lo ejecutes.</p>
 <hr />
