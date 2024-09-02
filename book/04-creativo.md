@@ -39,6 +39,10 @@ for i in range(1, filas + 1):  # Iteramos desde 1 hasta el número de filas
     print(" " * (filas - i) + "*" * (2 * i - 1))  # Imprime los espacios y los asteriscos correspondientes en cada fila
 ```
 
+#### Desafío
+
+¿Puedes hacer que la pirámide se dibuje al revés, con la base en la parte superior? Modifica el código para que la pirámide se invierta, o prueba a crear una pirámide hueca.
+
 ---
 
 ### 4.2 Patrón de Diamante
@@ -82,6 +86,11 @@ for i in range(filas - 1, 0, -1):  # Iteramos de regreso desde el número de fil
     print(" " * (filas - i) + "*" * (2 * i - 1))  # Imprime los espacios y los asteriscos
 ```
 
+#### Desafío
+
+¿Qué tal si hacemos que el diamante sea de otro carácter en lugar de asteriscos? Intenta modificar el programa para que el usuario pueda elegir con qué símbolo dibujar el diamante.
+
+
 ---
 
 ### 4.3 Número Aleatorio dentro de un Rango
@@ -119,6 +128,10 @@ numero_aleatorio = random.randint(limite_inferior, limite_superior)  # Genera un
 print(f"El número aleatorio entre {limite_inferior} y {limite_superior} es: {numero_aleatorio}")  # Imprime el número aleatorio
 ```
 
+#### Desafío
+
+¿Y si añadimos una función que permita generar una lista de números aleatorios? Modifica el programa para que el usuario pueda elegir cuántos números aleatorios desea generar.
+
 ---
 
 ### 4.4 Palíndromo
@@ -155,6 +168,10 @@ else:
     print("No es un palíndromo.")  # Imprime si el texto no es un palíndromo
 ```
 
+#### Desafío
+
+¿Puedes modificar el programa para que ignore las mayúsculas y los signos de puntuación al comprobar si es un palíndromo? Intenta hacerlo más robusto para detectar palíndromos en frases más complejas.
+
 ---
 
 ### 4.5 Dibujar un Rectángulo con Asteriscos
@@ -187,6 +204,10 @@ ancho = int(input("Ingresa el ancho del rectángulo: "))  # Convertimos la entra
 for i in range(ancho):  # Iteramos tantas veces como el ancho
     print("*" * longitud)  # Imprimimos una fila de asteriscos de longitud dada
 ```
+
+#### Desafío
+
+¿Qué tal si hacemos que el rectángulo sea hueco por dentro? Modifica el programa para que dibuje un rectángulo con solo el borde hecho de asteriscos.
 
 ---
 

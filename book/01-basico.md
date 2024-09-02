@@ -32,6 +32,10 @@ Para resolver este problema, usaremos la función `print()` en Python. Esta func
 print("Hola Mundo")  # Esto imprimirá "Hola Mundo" en la consola
 ```
 
+#### Desafío
+
+¿Se te ocurren otras formas de mostrar mensajes en la pantalla? ¿Qué tal si pruebas a saludar en varios idiomas? Intenta modificar el programa para que imprima un saludo diferente cada vez que lo ejecutes.
+
 ---
 
 ### 1.2 Calculadora Sencilla
@@ -68,6 +72,10 @@ print("Resta:", num1 - num2)  # Imprime la resta del segundo número del primero
 print("Multiplicación:", num1 * num2)  # Imprime el producto de los dos números
 print("División:", num1 / num2)  # Imprime la división del primer número por el segundo
 ```
+
+#### Desafío
+
+¿Y si le añadimos más operaciones? ¿Podrías hacer que la calculadora también realice la potencia y la raíz cuadrada? Intenta extender el programa para que el usuario pueda elegir entre más opciones.
 
 ---
 
@@ -108,6 +116,10 @@ area = (base * altura) / 2  # Multiplicamos base por altura y dividimos por 2
 print("El área del triángulo es:", area)  # Imprime el área calculada
 ```
 
+#### Desafío
+
+¿Se te ocurre cómo hacer que el programa funcione con diferentes tipos de triángulos? Por ejemplo, un triángulo equilátero o isósceles. ¿Cómo cambiarías el cálculo del área en estos casos?
+
 ---
 
 ### 1.4 Área de un Cuadrado
@@ -144,6 +156,10 @@ area = lado * lado  # Elevamos al cuadrado el valor ingresado
 # Mostramos el resultado al usuario
 print("El área del cuadrado es:", area)  # Imprime el área calculada
 ```
+
+#### Desafío
+
+¿Qué pasa si pedimos al usuario que dibuje el cuadrado en la pantalla usando asteriscos? Intenta extender el programa para que, además de calcular el área, también dibuje el cuadrado.
 
 ---
 
@@ -184,6 +200,10 @@ area = math.pi * radio * radio  # Multiplicamos pi por el radio elevado al cuadr
 # Mostramos el resultado al usuario
 print("El área del círculo es:", area)  # Imprime el área calculada
 ```
+
+#### Desafío
+
+¿Podrías modificar el programa para que calcule y muestre también la circunferencia del círculo? Recuerda que la fórmula para la circunferencia es $2\pi radio$.
 
 ---
 

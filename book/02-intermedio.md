@@ -39,6 +39,10 @@ for i in range(1, 11):  # Recorremos los números del 1 al 10
     print(f"{numero} x {i} = {numero * i}")  # Imprime el resultado de la multiplicación
 ```
 
+#### Desafío
+
+¿Y si permitimos al usuario elegir hasta qué número quiere ver la tabla? Por ejemplo, podría pedir la tabla del 7, pero solo hasta el 5. ¿Cómo adaptarías el código para hacer esto?
+
 ---
 
 ### 2.2 Juego de Dados
@@ -85,6 +89,10 @@ else:
     print("Es un empate")  # Imprime si ambos dados tienen el mismo valor
 ```
 
+#### Desafío
+
+¿Podrías hacer que el juego sea más emocionante? ¿Qué tal si cada jugador lanza dos dados y sumamos los resultados? Modifica el programa para que compare la suma de los dados y determine el ganador.
+
 ---
 
 ### 2.3 Saludo Personalizado
@@ -113,6 +121,10 @@ nombre = input("¿Cuál es tu nombre? ")  # Guardamos la entrada del usuario
 # Saludamos al usuario usando su nombre
 print(f"Hola, {nombre}")  # Imprime un saludo personalizado
 ```
+
+#### Desafío
+
+¿Y si queremos que el programa haga algo más que saludar? Intenta que el programa pregunte por la edad del usuario y luego le diga cuántos años tendrá en 10 años.
 
 ---
 
@@ -150,6 +162,10 @@ print("La cadena en mayúsculas es:", texto.upper())  # Convierte la cadena a ma
 # Invertimos la cadena y la mostramos
 print("La cadena al revés es:", texto[::-1])  # Imprime la cadena invertida
 ```
+
+#### Desafío
+
+¿Puedes hacer que el programa cuente cuántas veces aparece una letra específica en la cadena? Pide al usuario que elija una letra, y luego muéstrale cuántas veces aparece en el texto.
 
 ---
 
@@ -191,6 +207,10 @@ for char in texto:
 # Mostramos el número total de vocales encontradas
 print("El número de vocales en la cadena es:", contador)  # Imprime el conteo de vocales
 ```
+
+#### Desafío
+
+¿Qué tal si complicamos un poquito más el desafío? ¿Puedes hacer que el programa cuente también cuántas consonantes hay en la cadena de texto? Intenta modificar el programa para que haga ambas cosas.
 
 ---
 

@@ -43,6 +43,10 @@ mayor = max(num1, num2, num3)  # Encuentra el mayor de los tres números
 print("El número mayor es:", mayor)  # Imprime el mayor número
 ```
 
+#### Desafío
+
+¿Y si ampliamos el programa para que funcione con más de tres números? Modifica el código para que el usuario pueda ingresar tantos números como quiera, y el programa le diga cuál es el mayor.
+
 ---
 
 ### 3.2 Adivina el Número
@@ -94,6 +98,10 @@ while True:
         break  # Salimos del bucle
 ```
 
+#### Desafío
+
+¿Qué tal si hacemos el juego un poco más difícil? ¿Puedes limitar el número de intentos que tiene el usuario? Modifica el programa para que, si no adivina el número en un número determinado de intentos, pierda el juego.
+
 ---
 
 ### 3.3 Calcula la Edad
@@ -133,6 +141,10 @@ edad = ano_actual - ano_nacimiento  # Calculamos la diferencia de años
 print(f"Tienes {edad} años.")  # Imprime la edad calculada
 ```
 
+#### Desafío
+
+¿Y si además de calcular la edad, calculamos cuántos días ha vivido la persona? Intenta modificar el programa para mostrar tanto la edad en años como en días.
+
 ---
 
 ### 3.4 Año Bisiesto
@@ -166,6 +178,11 @@ if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
 else:
     print(f"El año {ano} no es bisiesto.")  # Imprime si el año no es bisiesto
 ```
+
+#### Desafío
+
+¿Qué tal si hacemos que el programa muestre todos los años bisiestos desde el año 1 hasta el año actual? Modifica el programa para que muestre una lista de años bisiestos en ese rango.
+
 
 ---
 
@@ -212,6 +229,10 @@ elif opcion == "F":
 else:
     print("Opción no válida. Por favor elige 'C' o 'F'.")  # Mensaje si la opción es inválida
 ```
+
+#### Desafío
+
+¿Puedes hacer que el programa convierta también de Kelvin a Celsius y de Celsius a Kelvin? Añade estas opciones al menú de conversiones para que el usuario tenga más posibilidades.
 
 ---
 
