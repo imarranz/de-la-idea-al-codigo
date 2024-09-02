@@ -94,7 +94,7 @@
                 <p>\clearpage
 \newpage</p>
 <h2 id="capitulo_1_conceptos_basicos_de_programacion">Capítulo 1: Conceptos Básicos de Programación<a class="headerlink" href="#capitulo_1_conceptos_basicos_de_programacion" title="Permanent link">#</a></h2>
-<p>¡Bienvenidos al primer capítulo de nuestro viaje por el mundo de la programación! Aquí es donde todo comienza. En este capítulo, aprenderemos los conceptos fundamentales de la programación en Python, un lenguaje que es tan poderoso como fácil de aprender. Si nunca has programado antes, no te preocupes. Este capítulo está diseñado para llevarte de la mano, paso a paso, desde lo más básico hasta que tengas las herramientas necesarias para crear tus propios programas.</p>
+<p>¡Bienvenidos al primer capítulo de nuestro viaje por el mundo de la programación! Aquí es donde todo comienza. En este capítulo, aprenderemos los conceptos fundamentales de la programación en Python, un lenguaje que es tan poderoso como fácil de aprender. Si nunca has programado antes, no te preocupes. Este capítulo está diseñado para llevarte de la mano, paso a paso, desde lo más básico hasta que tengas las herramientas necesarias para crear tus propios progr8amas.</p>
 <p>Empezaremos con algo muy sencillo: hacer que la computadora nos salude. A partir de ahí, veremos cómo realizar operaciones matemáticas básicas, calcular áreas de formas geométricas y más. Estos conceptos son la base de todo lo que haremos en los capítulos siguientes, así que presta mucha atención y, sobre todo, ¡diviértete mientras aprendes!</p>
 <h3 id="11_hola_mundo">1.1 Hola Mundo<a class="headerlink" href="#11_hola_mundo" title="Permanent link">#</a></h3>
 <h4 id="el_reto">El Reto<a class="headerlink" href="#el_reto" title="Permanent link">#</a></h4>
@@ -112,11 +112,19 @@
 <pre><code class="language-python"># Imprime un saludo simple en la pantalla
 print(&quot;Hola Mundo&quot;)  # Esto imprimirá &quot;Hola Mundo&quot; en la consola
 </code></pre>
-<p><button onclick="runPython()">Ejecutar Hola Mundo</button></p>
-<pre id="output"></pre>
+<p><button onclick="runHolaMundo()">Ejecutar Hola Mundo</button></p>
+<pre id="reto11"></pre>
+
 <script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
-<script type="text/python"> # Código Python def hello_world(): return "Hola Mundo desde Python en el navegador!" # Llamada a la función y salida output = hello_world() document.getElementById("output").textContent = output </script>
-<script> async function runPython() { let pyodide = await loadPyodide(); await pyodide.runPythonAsync(document.querySelector('script[type="text/python"]').textContent); } </script>
+<script>
+async function runHolaMundo() {
+  let pyodide = await loadPyodide();  // Cargar Pyodide
+  let output = pyodide.runPython(`
+    "Hola Mundo"
+  `);  // Ejecutar código Python y obtener el resultado
+  document.getElementById("reto11").textContent = output;  // Mostrar el resultado en la página
+}
+</script>
 
 <h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
 <p>¿Se te ocurren otras formas de mostrar mensajes en la pantalla? ¿Qué tal si pruebas a saludar en varios idiomas? Intenta modificar el programa para que imprima un saludo diferente cada vez que lo ejecutes.</p>
@@ -148,6 +156,40 @@ print(&quot;Resta:&quot;, num1 - num2)  # Imprime la resta del segundo número d
 print(&quot;Multiplicación:&quot;, num1 * num2)  # Imprime el producto de los dos números
 print(&quot;División:&quot;, num1 / num2)  # Imprime la división del primer número por el segundo
 </code></pre>
+<p><input type="number" id="num1" placeholder="Ingresa el primer número">
+<input type="number" id="num2" placeholder="Ingresa el segundo número">
+<button onclick="runCalculadoraSencilla()">Ejecutar Calculadora Sencilla</button></p>
+<pre id="reto12"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runCalculadoraSencilla() {
+  let pyodide = await loadPyodide();
+
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+
+  if (isNaN(num1) || isNaN(num2)) {
+    document.getElementById("reto12").textContent = "Por favor, ingresa dos números válidos.";
+    return;
+  }
+
+  let output = pyodide.runPython(`
+  num1 = ${num1}
+  num2 = ${num2}
+
+  suma = num1 + num2
+  resta = num1 - num2
+  multiplicacion = num1 * num2
+  division = num1 / num2
+
+  resultados = f"Suma: {suma} \\nResta: {resta}\\nMultiplicación: {multiplicacion}\\nDivisión: {division:.3f}"
+  resultados`);
+
+  document.getElementById("reto12").textContent = output;
+}
+</script>
+
 <h4 id="desafio_1">Desafío<a class="headerlink" href="#desafio_1" title="Permanent link">#</a></h4>
 <p>¿Y si le añadimos más operaciones? ¿Podrías hacer que la calculadora también realice la potencia y la raíz cuadrada? Intenta extender el programa para que el usuario pueda elegir entre más opciones.</p>
 <hr />
@@ -178,6 +220,36 @@ area = (base * altura) / 2  # Multiplicamos base por altura y dividimos por 2
 # Mostramos el resultado al usuario
 print(&quot;El área del triángulo es:&quot;, area)  # Imprime el área calculada
 </code></pre>
+<p><input type="number" id="base" placeholder="Ingresa la base del triángulo">
+<input type="number" id="altura" placeholder="Ingresa la altura del triángulo">
+<button onclick="runAreaTriangulo()">Ejecutar Triángulo Sencilloa</button></p>
+<pre id="reto13"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runAreaTriangulo() {
+  let pyodide = await loadPyodide();
+
+  let base = parseFloat(document.getElementById("base").value);
+  let altura = parseFloat(document.getElementById("altura").value);
+
+  if (isNaN(base) || isNaN(altura)) {
+    document.getElementById("reto13").textContent = "Por favor, ingresa dos números válidos.";
+    return;
+  }
+
+  let output = pyodide.runPython(`
+  base = ${base}
+  altura = ${altura}
+
+  area = (base * altura) / 2
+  area = f"El área de un triángulo de base: {base:.2f} y altura: {altura:.2f} es {area:.3f}"
+  area`);
+
+  document.getElementById("reto13").textContent = output;
+}
+</script>
+
 <h4 id="desafio_2">Desafío<a class="headerlink" href="#desafio_2" title="Permanent link">#</a></h4>
 <p>¿Se te ocurre cómo hacer que el programa funcione con diferentes tipos de triángulos? Por ejemplo, un triángulo equilátero o isósceles. ¿Cómo cambiarías el cálculo del área en estos casos?</p>
 <hr />
@@ -206,6 +278,33 @@ area = lado * lado  # Elevamos al cuadrado el valor ingresado
 # Mostramos el resultado al usuario
 print(&quot;El área del cuadrado es:&quot;, area)  # Imprime el área calculada
 </code></pre>
+<p><input type="number" id="lado" placeholder="Ingresa el lado del cuadrado">
+<button onclick="runAreaCuadrado()">Ejecutar Área de un Cuadrado</button></p>
+<pre id="reto14"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runAreaCuadrado() {
+  let pyodide = await loadPyodide();
+
+  let lado = parseFloat(document.getElementById("lado").value);
+
+
+  if (isNaN(lado)) {
+    document.getElementById("reto14").textContent = "Por favor, ingresa un número válido.";
+    return;
+  }
+
+  let output = pyodide.runPython(`
+  lado = ${lado}
+  area = lado * lado
+  area = f"El área de un cuadrado de lado: {lado:.2f} es {area:.3f}"
+  area`);
+
+  document.getElementById("reto14").textContent = output;
+}
+</script>
+
 <h4 id="desafio_3">Desafío<a class="headerlink" href="#desafio_3" title="Permanent link">#</a></h4>
 <p>¿Qué pasa si pedimos al usuario que dibuje el cuadrado en la pantalla usando asteriscos? Intenta extender el programa para que, además de calcular el área, también dibuje el cuadrado.</p>
 <hr />
@@ -237,6 +336,33 @@ area = math.pi * radio * radio  # Multiplicamos pi por el radio elevado al cuadr
 # Mostramos el resultado al usuario
 print(&quot;El área del círculo es:&quot;, area)  # Imprime el área calculada
 </code></pre>
+<p><input type="number" id="radio" placeholder="Ingresa el radio del círculo">
+<button onclick="runAreaCirculo()">Ejecutar Área de un Círculo</button></p>
+<pre id="reto15"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runAreaCirculo() {
+  let pyodide = await loadPyodide();
+
+  let radio = parseFloat(document.getElementById("radio").value);
+
+  if (isNaN(radio)) {
+    document.getElementById("reto15").textContent = "Por favor, ingresa un número válido.";
+    return;
+  }
+
+  let output = pyodide.runPython(`
+  import math
+  radio = ${radio}
+  area = math.pi * radio * radio
+  area = f"El área de un círculo de radio: {radio:.2f} es {area:.3f}"
+  area`);
+
+  document.getElementById("reto15").textContent = output;
+}
+</script>
+
 <h4 id="desafio_4">Desafío<a class="headerlink" href="#desafio_4" title="Permanent link">#</a></h4>
 <p>¿Podrías modificar el programa para que calcule y muestre también la circunferencia del círculo? Recuerda que la fórmula para la circunferencia es $2\times\pi\times\text{radio}$.</p>
 <hr />

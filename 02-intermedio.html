@@ -117,6 +117,32 @@ for i in range(1, 11):  # Recorremos los números del 1 al 10
     # Mostramos el resultado de la multiplicación en cada iteración
     print(f&quot;{numero} x {i} = {numero * i}&quot;)  # Imprime el resultado de la multiplicación
 </code></pre>
+<p><input type="number" id="numero" placeholder="Ingresa un número">
+<button onclick="runTablaMultiplicar()">Generar Tabla</button></p>
+<pre id="reto21"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runTablaMultiplicar() {
+    let pyodide = await loadPyodide();
+    let numero = parseInt(document.getElementById("numero").value);
+
+    if (isNaN(numero)) {
+        document.getElementById("reto21").textContent = "Por favor, ingresa un número válido."; return;
+    }
+
+    let output = pyodide.runPython(`
+    numero = ${numero}
+    resultado = ""
+    for i in range(1, 11):
+        resultado += f"{numero} x {i} = {numero * i}\\n"
+    resultado `);
+
+    document.getElementById("reto21").textContent = output; }
+
+</script>
+
 <h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
 <p>¿Y si permitimos al usuario elegir hasta qué número quiere ver la tabla? Por ejemplo, podría pedir la tabla del 7, pero solo hasta el 5. ¿Cómo adaptarías el código para hacer esto?</p>
 <hr />
@@ -156,6 +182,34 @@ elif dado1 &lt; dado2:
 else:
     print(&quot;Es un empate&quot;)  # Imprime si ambos dados tienen el mismo valor
 </code></pre>
+<p><button onclick="runJuegoDados()">Lanzar Dados</button></p>
+<pre id="reto22"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runJuegoDados() {
+
+    let pyodide = await loadPyodide();
+
+    let output = pyodide.runPython(`
+    import random # Generamos dos números aleatorios entre 1 y 6, como si fueran dados
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6) # Mostramos los valores de los dados
+    resultados = f"El primer dado sacó: {dado1}\\nEl segundo dado sacó: {dado2}\\n" # Determinamos quién ganó o si fue un empate
+
+    if dado1 > dado2:
+        resultados += "El primer dado gana"
+    elif dado1 < dado2:
+        resultados += "El segundo dado gana"
+    else:
+        resultados += "Es un empate"
+
+    resultados`);
+
+    document.getElementById("reto22").textContent = output;
+}
+</script>
+
 <h4 id="desafio_1">Desafío<a class="headerlink" href="#desafio_1" title="Permanent link">#</a></h4>
 <p>¿Podrías hacer que el juego sea más emocionante? ¿Qué tal si cada jugador lanza dos dados y sumamos los resultados? Modifica el programa para que compare la suma de los dados y determine el ganador.</p>
 <hr />
@@ -178,6 +232,27 @@ nombre = input(&quot;¿Cuál es tu nombre? &quot;)  # Guardamos la entrada del u
 # Saludamos al usuario usando su nombre
 print(f&quot;Hola, {nombre}&quot;)  # Imprime un saludo personalizado
 </code></pre>
+<p><input type="text" id="nombre" placeholder="¿Cuál es tu nombre?">
+<button onclick="runSaludoPersonalizado()">Saludar</button></p>
+<pre id="reto23"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runSaludoPersonalizado() {
+    let pyodide = await loadPyodide();
+    let nombre = document.getElementById("nombre").value.trim();
+    if (nombre === "") {
+        document.getElementById("saludo_output").textContent = "Por favor, ingresa tu nombre.";
+        return;
+    }
+    let output = pyodide.runPython(`
+    nombre = "${nombre}"
+    saludo = f"¡Hola, {nombre}!"
+    saludo `);
+
+    document.getElementById("reto23").textContent = output; }
+</script>
+
 <h4 id="desafio_2">Desafío<a class="headerlink" href="#desafio_2" title="Permanent link">#</a></h4>
 <p>¿Y si queremos que el programa haga algo más que saludar? Intenta que el programa pregunte por la edad del usuario y luego le diga cuántos años tendrá en 10 años.</p>
 <hr />
@@ -208,6 +283,33 @@ print(&quot;La cadena en mayúsculas es:&quot;, texto.upper())  # Convierte la c
 # Invertimos la cadena y la mostramos
 print(&quot;La cadena al revés es:&quot;, texto[::-1])  # Imprime la cadena invertida
 </code></pre>
+<p><input type="text" id="texto" placeholder="Ingresa una cadena de texto"> <button onclick="runCadenasTexto()">Ejecutar Manipulación de Cadenas</button></p>
+<pre id="reto24"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runCadenasTexto() {
+
+    let pyodide = await loadPyodide();
+    let texto = document.getElementById("texto").value.trim();
+
+    if (texto === "") {
+        document.getElementById("reto24").textContent = "Por favor, ingresa una cadena de texto.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    texto = "${texto}" # Mostramos la longitud de la cadena
+    longitud = len(texto) # Convertimos la cadena a mayúsculas
+    mayusculas = texto.upper() # Invertimos la cadena
+    reversa = texto[::-1] # Combinamos los resultados en una salida formateada
+    resultados = f"La longitud de la cadena es: {longitud}\\n" + f"La cadena en mayúsculas es: {mayusculas}\\n" + f"La cadena al revés es: {reversa}"
+    resultados `);
+
+    document.getElementById("reto24").textContent = output;
+}
+</script>
+
 <h4 id="desafio_3">Desafío<a class="headerlink" href="#desafio_3" title="Permanent link">#</a></h4>
 <p>¿Puedes hacer que el programa cuente cuántas veces aparece una letra específica en la cadena? Pide al usuario que elija una letra, y luego muéstrale cuántas veces aparece en el texto.</p>
 <hr />
@@ -242,6 +344,33 @@ for char in texto:
 # Mostramos el número total de vocales encontradas
 print(&quot;El número de vocales en la cadena es:&quot;, contador)  # Imprime el conteo de vocales
 </code></pre>
+<p><input type="text" id="texto_vocales" placeholder="Ingresa una cadena de texto">
+<button onclick="runContadorVocales()">Contar Vocales</button></p>
+<pre id="reto25"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runContadorVocales() {
+    let pyodide = await loadPyodide();
+    let texto = document.getElementById("texto_vocales").value.trim();
+
+    if (texto === "") {
+        document.getElementById("reto25").textContent = "Por favor, ingresa una cadena de texto.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    texto = "${texto}"
+    vocales = "aeiouAEIOU"
+    contador = 0 # Iteramos a través de cada carácter en la cadena
+
+    for char in texto:
+        if char in vocales: contador += 1 # Mostramos el número total de vocales encontradas
+    f"El número de vocales en la cadena es: {contador}" `); document.getElementById("reto25").textContent = output;
+}
+</script>
+
 <h4 id="desafio_4">Desafío<a class="headerlink" href="#desafio_4" title="Permanent link">#</a></h4>
 <p>¿Qué tal si complicamos un poquito más el desafío? ¿Puedes hacer que el programa cuente también cuántas consonantes hay en la cadena de texto? Intenta modificar el programa para que haga ambas cosas.</p>
 <hr />

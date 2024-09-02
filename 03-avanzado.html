@@ -121,6 +121,33 @@ mayor = max(num1, num2, num3)  # Encuentra el mayor de los tres números
 # Mostramos el número mayor
 print(&quot;El número mayor es:&quot;, mayor)  # Imprime el mayor número
 </code></pre>
+<p><input type="number" id="num1" placeholder="Ingresa el primer número">
+<input type="number" id="num2" placeholder="Ingresa el segundo número">
+<input type="number" id="num3" placeholder="Ingresa el tercer número">
+<button onclick="runNumeroMayor()">Encontrar Número Mayor</button></p>
+<pre id="reto31"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script> async function runNumeroMayor() {
+    let pyodide = await loadPyodide();
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let num3 = parseFloat(document.getElementById("num3").value);
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        document.getElementById("reto31").textContent = "Por favor, ingresa tres números válidos.";
+        return;
+    }
+    let output = pyodide.runPython(`
+    num1 = ${num1}
+    num2 = ${num2}
+    num3 = ${num3}
+    mayor = max(num1, num2, num3)
+    f"El número mayor es: {mayor}" `);
+    document.getElementById("reto31").textContent = output;
+}
+</script>
+
 <h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
 <p>¿Y si ampliamos el programa para que funcione con más de tres números? Modifica el código para que el usuario pueda ingresar tantos números como quiera, y el programa le diga cuál es el mayor.</p>
 <hr />
@@ -197,6 +224,79 @@ edad = ano_actual - ano_nacimiento  # Calculamos la diferencia de años
 # Mostramos la edad del usuario
 print(f&quot;Tienes {edad} años.&quot;)  # Imprime la edad calculada
 </code></pre>
+<p><input type="number" id="ano_nacimiento" placeholder="¿En qué año naciste?">
+<button onclick="runCalcularEdad()">Calcular Edad</button></p>
+<pre id="reto33"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runCalcularEdad() {
+    let pyodide = await loadPyodide();
+    let ano_nacimiento = parseInt(document.getElementById("ano_nacimiento").value);
+
+    if (isNaN(ano_nacimiento) || ano_nacimiento <= 0) {
+        document.getElementById("reto33").textContent = "Por favor, ingresa un año de nacimiento válido.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    from datetime import datetime
+    ano_nacimiento = ${ano_nacimiento}
+    ano_actual = datetime.now().year
+    edad = ano_actual - ano_nacimiento
+    f"Tienes {edad} años." `);
+
+    document.getElementById("reto33").textContent = output;
+}
+</script>
+
+<!--
+
+<button onclick="runPlot()">Generar Gráfico</button>
+<canvas id="canvas"></canvas>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+<script>
+async function runPlot() {
+  let pyodide = await loadPyodide();
+  await pyodide.loadPackage("matplotlib");
+
+  let output = pyodide.runPython(`
+import matplotlib.pyplot as plt
+import io
+import base64
+from js import document
+
+# Datos para el gráfico
+x = range(-10, 11)
+y = [i**2 for i in x]
+
+# Crear el gráfico
+plt.figure(figsize=(6, 4))
+plt.plot(x, y, label='y = x^2')
+plt.title('Gráfico de y = x^2')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+
+# Guardar el gráfico en un buffer
+buf = io.BytesIO()
+plt.savefig(buf, format='png')
+buf.seek(0)
+
+# Convertir el gráfico a base64
+img_base64 = base64.b64encode(buf.read()).decode('ascii')
+
+# Insertar la imagen en el canvas
+document.getElementById("canvas").outerHTML = '<img src="data:image/png;base64,' + img_base64 + '" />'
+`);
+
+  document.getElementById("canvas").style.display = "none"; // Oculta el canvas original
+}
+</script>
+
+-->
+
 <h4 id="desafio_2">Desafío<a class="headerlink" href="#desafio_2" title="Permanent link">#</a></h4>
 <p>¿Y si además de calcular la edad, calculamos cuántos días ha vivido la persona? Intenta modificar el programa para mostrar tanto la edad en años como en días.</p>
 <hr />
@@ -204,7 +304,7 @@ print(f&quot;Tienes {edad} años.&quot;)  # Imprime la edad calculada
 <h4 id="el_reto_3">El Reto<a class="headerlink" href="#el_reto_3" title="Permanent link">#</a></h4>
 <p>Un año bisiesto es aquel que tiene un día adicional (29 de febrero), y ocurre cada cuatro años, con algunas excepciones. En este ejercicio, escribiremos un programa que determine si un año ingresado por el usuario es bisiesto o no.</p>
 <h4 id="como_resolverlo_3">Cómo Resolverlo<a class="headerlink" href="#como_resolverlo_3" title="Permanent link">#</a></h4>
-<p>Para resolver este problema, aplicaremos las reglas de los años bisiestos: un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400. Usaremos estas condiciones en un bloque <code>if-elif-else</code>.</p>
+<p>Para resolver este problema, aplicaremos las reglas de los años bisiestos: un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400. Usaremos estas condiciones en un bloque <code>if-else</code>.</p>
 <h4 id="pseudocodigo_3">Pseudocódigo<a class="headerlink" href="#pseudocodigo_3" title="Permanent link">#</a></h4>
 <ol>
 <li>Empezar el programa.</li>
@@ -224,6 +324,33 @@ if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
 else:
     print(f&quot;El año {ano} no es bisiesto.&quot;)  # Imprime si el año no es bisiesto
 </code></pre>
+<p><input type="number" id="ano" placeholder="Ingresa un año">
+<button onclick="runAnoBisiesto()">Verificar Año Bisiesto</button></p>
+<pre id="reto34"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runAnoBisiesto() {
+    let pyodide = await loadPyodide();
+    let ano = parseInt(document.getElementById("ano").value);
+
+    if (isNaN(ano) || ano <= 0) {
+        document.getElementById("reto34").textContent = "Por favor, ingresa un año válido.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    ano = ${ano}
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+        resultado = f"El año {ano} es bisiesto."
+    else:
+        resultado = f"El año {ano} no es bisiesto."
+    resultado `);
+
+    document.getElementById("reto34").textContent = output;
+}
+</script>
+
 <h4 id="desafio_3">Desafío<a class="headerlink" href="#desafio_3" title="Permanent link">#</a></h4>
 <p>¿Qué tal si hacemos que el programa muestre todos los años bisiestos desde el año 1 hasta el año actual? Modifica el programa para que muestre una lista de años bisiestos en ese rango.</p>
 <hr />
@@ -263,6 +390,45 @@ elif opcion == &quot;F&quot;:
 else:
     print(&quot;Opción no válida. Por favor elige 'C' o 'F'.&quot;)  # Mensaje si la opción es inválida
 </code></pre>
+<p><select id="conversion_tipo"></p>
+<option value="C">Celsius a Fahrenheit</option>
+<option value="F">Fahrenheit a Celsius</option>
+<p></select>
+<input type="number" id="temperatura" placeholder="Ingresa la temperatura">
+<button onclick="runConversionTemperaturas()">Convertir</button></p>
+<pre id="reto35"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runConversionTemperaturas() {
+    let pyodide = await loadPyodide();
+    let tipo = document.getElementById("conversion_tipo").value;
+    let temperatura = parseFloat(document.getElementById("temperatura").value);
+
+    if (isNaN(temperatura)) {
+        document.getElementById("reto35").textContent = "Por favor, ingresa una temperatura válida.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    tipo = "${tipo}"
+    temperatura = ${temperatura}
+
+    if tipo == "C":
+        fahrenheit = (temperatura * 9/5) + 32
+        resultado = f"{temperatura:.1f} grados Celsius son {fahrenheit:.1f} grados Fahrenheit."
+    elif tipo == "F":
+        celsius = (temperatura - 32) * 5/9
+        resultado = f"{temperatura:.1f} grados Fahrenheit son {celsius:.1f} grados Celsius."
+    else:
+        resultado = "Opción no válida. Por favor elige 'C' o 'F'."
+
+    resultado `);
+
+    document.getElementById("reto35").textContent = output;
+}
+</script>
+
 <h4 id="desafio_4">Desafío<a class="headerlink" href="#desafio_4" title="Permanent link">#</a></h4>
 <p>¿Puedes hacer que el programa convierta también de Kelvin a Celsius y de Celsius a Kelvin? Añade estas opciones al menú de conversiones para que el usuario tenga más posibilidades.</p>
 <hr />

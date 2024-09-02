@@ -117,6 +117,32 @@ filas = int(input(&quot;¿Cuántas filas tendrá la pirámide? &quot;))  # Conve
 for i in range(1, filas + 1):  # Iteramos desde 1 hasta el número de filas
     print(&quot; &quot; * (filas - i) + &quot;*&quot; * (2 * i - 1))  # Imprime los espacios y los asteriscos correspondientes en cada fila
 </code></pre>
+<p><input type="number" id="filas" placeholder="Número de filas">
+<button onclick="runCrearPiramide()">Generar Pirámide</button></p>
+<pre id="reto41"></pre>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runCrearPiramide() {
+    let pyodide = await loadPyodide();
+    let filas = parseInt(document.getElementById("filas").value);
+
+    if (isNaN(filas) || filas <= 0) {
+        document.getElementById("reto41").textContent = "Por favor, ingresa un número válido de filas.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    filas = ${filas}
+    piramide = ""
+    for i in range(1, filas + 1): # Imprimimos los espacios en blanco y los asteriscos para formar la pirámide
+        piramide += " " * (filas - i) + "*" * (2 * i - 1) + "\\n"
+    piramide `);
+
+    document.getElementById("reto41").textContent = output;
+}
+</script>
+
 <h4 id="desafio">Desafío<a class="headerlink" href="#desafio" title="Permanent link">#</a></h4>
 <p>¿Puedes hacer que la pirámide se dibuje al revés, con la base en la parte superior? Modifica el código para que la pirámide se invierta, o prueba a crear una pirámide hueca.</p>
 <hr />
@@ -157,6 +183,37 @@ for i in range(1, filas + 1):  # Iteramos desde 1 hasta el número de filas
 for i in range(filas - 1, 0, -1):  # Iteramos de regreso desde el número de filas menos 1 hasta 1
     print(&quot; &quot; * (filas - i) + &quot;*&quot; * (2 * i - 1))  # Imprime los espacios y los asteriscos
 </code></pre>
+<p><input type="number" id="numero_filas" placeholder="Número de filas">
+<button onclick="runPatronDiamante()">Generar Patrón Diamante</button></p>
+<pre id="reto42"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runPatronDiamante() {
+
+    let pyodide = await loadPyodide();
+    let filas = parseInt(document.getElementById("numero_filas").value);
+
+
+    if (isNaN(filas) || filas <= 0) {
+        document.getElementById("reto42").textContent = "Por favor, ingresa un número válido de filas.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    filas = ${filas}
+    diamante = "" # Parte superior del diamante
+    for i in range(1, filas + 1):
+        diamante += " " * (filas - i) + "*" * (2 * i - 1) + "\\n" # Parte inferior del diamante
+    for i in range(filas - 1, 0, -1):
+        diamante += " " * (filas - i) + "*" * (2 * i - 1) + "\\n"
+    diamante `);
+
+    document.getElementById("reto42").textContent = output;
+}
+</script>
+
 <h4 id="desafio_1">Desafío<a class="headerlink" href="#desafio_1" title="Permanent link">#</a></h4>
 <p>¿Qué tal si hacemos que el diamante sea de otro carácter en lugar de asteriscos? Intenta modificar el programa para que el usuario pueda elegir con qué símbolo dibujar el diamante.</p>
 <hr />
@@ -187,6 +244,35 @@ numero_aleatorio = random.randint(limite_inferior, limite_superior)  # Genera un
 # Mostramos el número aleatorio
 print(f&quot;El número aleatorio entre {limite_inferior} y {limite_superior} es: {numero_aleatorio}&quot;)  # Imprime el número aleatorio
 </code></pre>
+<p><input type="number" id="min_valor" placeholder="Valor mínimo">
+<input type="number" id="max_valor" placeholder="Valor máximo">
+<button onclick="runRandomNumber()">Generar Número Aleatorio</button></p>
+<pre id="reto43"></pre>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+
+<script>
+async function runRandomNumber() {
+    let pyodide = await loadPyodide();
+    let min_valor = parseInt(document.getElementById("min_valor").value);
+    let max_valor = parseInt(document.getElementById("max_valor").value);
+
+    if (isNaN(min_valor) || isNaN(max_valor) || min_valor > max_valor) {
+        document.getElementById("reto43").textContent = "Por favor, ingresa un rango válido.";
+        return;
+    }
+
+    let output = pyodide.runPython(`
+    import random
+    min_valor = ${min_valor}
+    max_valor = ${max_valor}
+    numero_aleatorio = random.randint(min_valor, max_valor)
+    f"El número aleatorio generado entre {min_valor} y {max_valor} es: {numero_aleatorio}" `);
+
+    document.getElementById("reto43").textContent = output;
+}
+</script>
+
 <h4 id="desafio_2">Desafío<a class="headerlink" href="#desafio_2" title="Permanent link">#</a></h4>
 <p>¿Y si añadimos una función que permita generar una lista de números aleatorios? Modifica el programa para que el usuario pueda elegir cuántos números aleatorios desea generar.</p>
 <hr />
